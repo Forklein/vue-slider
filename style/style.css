@@ -1,0 +1,50 @@
+body{
+    background-color: brown;
+}
+
+i{
+    cursor: pointer;
+    color: white;
+    animation: scaleup 1s infinite;
+}
+
+.box{
+    position: relative;
+}
+
+.bar{
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.dot{
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.active{
+    background-color: dodgerblue;
+}
+
+@keyframes scaleup {
+    0%{
+        transform: translateY(-5%);
+    }
+    50%{
+        transform: translateY(-10%);
+    }
+    75%{
+        transform: translateY(-5%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
