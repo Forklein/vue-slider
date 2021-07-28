@@ -3,9 +3,6 @@ console.log('Vue is activated', Vue);
 
 const app = new Vue({
     el: '#slider',
-    created() {
-        setInterval(this.increaseIndex, 2000);
-    },
     data: {
         currentIndex: 0,
         images: [
@@ -23,14 +20,10 @@ const app = new Vue({
     },
     methods: {
         isView(index) {
-            if (this.currentIndex === index) {
-                return 'view';
-            }
+            return this.currentIndex === index ? 'view' : '';
         },
         isActive(index) {
-            if (this.currentIndex === index) {
-                return 'active';
-            }
+            return this.currentIndex === index ? 'active' : '';
         },
         increaseIndex() {
             if (this.currentIndex === this.images.length - 1) {
@@ -51,3 +44,26 @@ const app = new Vue({
         },
     },
 })
+
+
+//# JS
+const createInterval = document.getElementById('interval');
+const startDisplay = document.getElementById('start');
+const pauseDisplay = document.getElementById('pause');
+
+let isStarted = true;
+let start;
+
+startDisplay.addEventListener('click', () => {
+    if (isStarted) {
+        start = setInterval(() => {
+            createInterval.click();
+        }, 1500);
+        isStarted = !isStarted;
+    }
+});
+
+pauseDisplay.addEventListener('click', () => {
+    isStarted = true;
+    clearInterval(start);
+});

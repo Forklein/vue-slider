@@ -21,6 +21,11 @@ h1{
     padding: 5px;
 }
 
+button{
+    align-self: stretch;
+    margin-top: 20px;
+}
+
 .view{
     display: inline-block;
     animation: fadeIn 1s linear;

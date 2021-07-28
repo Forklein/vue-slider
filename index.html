@@ -19,8 +19,9 @@
 
     <div id="slider" class="container">
         <div class="row vh-100">
-            <div class="col-2 d-flex justify-content-center align-items-center">
+            <div class="col-2 d-flex flex-column justify-content-center align-items-center">
                 <i @click="decreaseIndex" class="fas fa-arrow-circle-left fa-5x"></i>
+                <button id="start">Avvia</button>
             </div>
             <div class="col-8 d-flex flex-column justify-content-center align-items-center">
                 <div class="text mb-3">
@@ -36,8 +37,9 @@
                     </div>
                 </div>
             </div>
-            <div class="col-2 d-flex justify-content-center align-items-center">
-                <i @click="increaseIndex" class="fas fa-arrow-circle-right fa-5x"></i>
+            <div class="col-2 d-flex flex-column justify-content-center align-items-center">
+                <i id="interval" @click="increaseIndex" class="fas fa-arrow-circle-right fa-5x"></i>
+                <button id="pause">Pausa</button>
             </div>
         </div>
     </div>
