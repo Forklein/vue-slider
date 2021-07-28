@@ -12,6 +12,11 @@ img{
     display: none;
 }
 
+h1{
+    display: none;
+    color: black;
+}
+
 .view{
     display: inline-block;
 }

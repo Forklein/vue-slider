@@ -12,11 +12,11 @@ const app = new Vue({
             "images/image4.jpg",
         ],
         names: [
-            "immagine 1",
-            "immagine 2",
-            "immagine 3",
-            "immagine 4",
-        ]
+            "Immagine 1",
+            "Immagine 2",
+            "Immagine 3",
+            "Immagine 4",
+        ],
     },
     methods: {
         isView(index) {
