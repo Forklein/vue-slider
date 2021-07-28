@@ -8,6 +8,14 @@ i{
     animation: scaleup 1s infinite;
 }
 
+img{
+    display: none;
+}
+
+.view{
+    display: inline-block;
+}
+
 .box{
     position: relative;
 }

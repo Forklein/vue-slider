@@ -20,28 +20,23 @@
     <div id="slider" class="container">
         <div class="row vh-100">
             <div class="col-2 d-flex justify-content-center align-items-center">
-                <i @click="" class="fas fa-arrow-circle-left fa-5x"></i>
+                <i @click="decreaseIndex" class="fas fa-arrow-circle-left fa-5x"></i>
             </div>
             <div class="col-8 d-flex justify-content-center align-items-center">
                 <div class="box">
                     <div class="box-image border border-3">
-                        <img v-for="(url, index) in images" :src="url" class="img-fluid">
+                        <img v-for="(url, index) in images" :src="url" :class="isActive(index)" class="img-fluid">
                     </div>
                     <div class="bar d-flex">
-                        <div class="dot mx-2 active"></div>
-                        <div class="dot mx-2"></div>
-                        <div class="dot mx-2"></div>
-                        <div class="dot mx-2"></div>
+                        <div v-for="(dot, index) in images" class="dot mx-2"></div>
                     </div>
                 </div>
             </div>
             <div class="col-2 d-flex justify-content-center align-items-center">
-                <i @click="" class="fas fa-arrow-circle-right fa-5x"></i>
+                <i @click="increaseIndex" class="fas fa-arrow-circle-right fa-5x"></i>
             </div>
         </div>
     </div>
-
-
 
 
     <script src="./js/script.js"></script>

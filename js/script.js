@@ -4,7 +4,7 @@ console.log('Vue is activated', Vue);
 const app = new Vue({
     el: '#slider',
     data: {
-        test: 'Hi vue!',
+        currentIndex: 0,
         images: [
             "images/image1.jpg",
             "images/image2.jpg",
@@ -13,8 +13,18 @@ const app = new Vue({
         ]
     },
     methods: {
-        bye() {
-            alert('Hi vue');
+        isActive(index) {
+            if (this.currentIndex === index) {
+                return 'view';
+            } else {
+                return '';
+            }
+        },
+        increaseIndex() {
+            this.currentIndex++;
+        },
+        decreaseIndex() {
+            this.currentIndex--;
         }
     },
 })
