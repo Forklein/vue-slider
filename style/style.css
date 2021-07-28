@@ -26,6 +26,10 @@ button{
     margin-top: 20px;
 }
 
+button:hover{
+    background-color: blueviolet;
+}
+
 .view{
     display: inline-block;
     animation: fadeIn 1s linear;
