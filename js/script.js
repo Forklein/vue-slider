@@ -3,6 +3,9 @@ console.log('Vue is activated', Vue);
 
 const app = new Vue({
     el: '#slider',
+    created() {
+        setInterval(this.increaseIndex, 2000);
+    },
     data: {
         currentIndex: 0,
         images: [
@@ -45,6 +48,6 @@ const app = new Vue({
         },
         setCurrentIndex(index) {
             this.currentIndex = index;
-        }
+        },
     },
 })
