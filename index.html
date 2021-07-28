@@ -22,13 +22,16 @@
             <div class="col-2 d-flex justify-content-center align-items-center">
                 <i @click="decreaseIndex" class="fas fa-arrow-circle-left fa-5x"></i>
             </div>
-            <div class="col-8 d-flex justify-content-center align-items-center">
+            <div class="col-8 d-flex flex-column justify-content-center align-items-center">
+                <div class="text mb-3">
+                    <h1>{{ }}</h1>
+                </div>
                 <div class="box">
                     <div class="box-image border border-3">
-                        <img v-for="(url, index) in images" :src="url" :class="isActive(index)" class="img-fluid">
+                        <img v-for="(url, index) in images" :src="url" :class="isView(index)" class="img-fluid">
                     </div>
                     <div class="bar d-flex">
-                        <div v-for="(dot, index) in images" class="dot mx-2"></div>
+                        <div v-for="(dot, index) in images" :class="isActive(index)" class="dot mx-2"></div>
                     </div>
                 </div>
             </div>

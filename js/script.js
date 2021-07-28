@@ -10,21 +10,38 @@ const app = new Vue({
             "images/image2.jpg",
             "images/image3.jpg",
             "images/image4.jpg",
+        ],
+        names: [
+            "immagine 1",
+            "immagine 2",
+            "immagine 3",
+            "immagine 4",
         ]
     },
     methods: {
-        isActive(index) {
+        isView(index) {
             if (this.currentIndex === index) {
                 return 'view';
-            } else {
-                return '';
+            }
+        },
+        isActive(index) {
+            if (this.currentIndex === index) {
+                return 'active';
             }
         },
         increaseIndex() {
-            this.currentIndex++;
+            if (this.currentIndex === this.images.length - 1) {
+                this.currentIndex = 0;
+            } else {
+                this.currentIndex++;
+            }
         },
         decreaseIndex() {
-            this.currentIndex--;
-        }
+            if (this.currentIndex <= 0) {
+                this.currentIndex = this.images.length - 1;
+            } else {
+                this.currentIndex--;
+            }
+        },
     },
 })
