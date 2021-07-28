@@ -2,14 +2,14 @@ body{
     background-color: brown;
 }
 
+img{
+    display: none;
+}
+
 i{
     cursor: pointer;
     color: white;
     animation: scaleup 1s infinite;
-}
-
-img{
-    display: none;
 }
 
 h1{
@@ -17,10 +17,22 @@ h1{
     color: black;
     font-size: 42px;
     font-family: sans-serif;
+    background-color: goldenrod;
+    padding: 5px;
 }
 
 .view{
     display: inline-block;
+    animation: fadeIn 1s linear;
+}
+
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1
+    }
 }
 
 .box{
@@ -29,10 +41,10 @@ h1{
 
 .bar{
     position: absolute;
-    bottom: 50px;
+    bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 10px;
     border-radius: 20px;
 }

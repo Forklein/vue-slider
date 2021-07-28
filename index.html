@@ -31,7 +31,8 @@
                         <img v-for="(url, index) in images" :src="url" :class="isView(index)" class="img-fluid">
                     </div>
                     <div class="bar d-flex">
-                        <div v-for="(dot, index) in images" :class="isActive(index)" class="dot mx-2"></div>
+                        <div v-for="(dot, index) in images" :class="isActive(index)" class="dot mx-2"
+                            @click="setCurrentIndex(index)"></div>
                     </div>
                 </div>
             </div>
